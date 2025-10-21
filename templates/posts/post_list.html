@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post</title>
+</head>
+
+<body>
+    <h1 style="text-align:center; color:#1e3a8a;">Post View</h1>
+
+    <table
+        style="width:80%; margin:20px auto; border-collapse:collapse; border:3px solid #1e3a8a; font-family:Arial, sans-serif;">
+        <thead>
+            <tr style="background-color:#e0f2fe; color:#1e3a8a;">
+                <th style="padding:10px; border:1px solid #1e3a8a;">Post ID (UUID)</th>
+                <th style="padding:10px; border:1px solid #1e3a8a;">Post Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for post in post_list %}
+            <tr style="background-color:#f8fafc; text-align:center;">
+                <td style="padding:8px; border:1px solid #1e3a8a;">{{ post.id}}</td>
+                <td style="padding:8px; border:1px solid #1e3a8a;">{{ post.text }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+</body>
+
+</html>
